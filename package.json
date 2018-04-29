@@ -10,7 +10,12 @@
   "dependencies": {
     "@oclif/command": "1",
     "@oclif/config": "1",
-    "@oclif/plugin-help": "1"
+    "@oclif/plugin-help": "1",
+    "@types/glob": "^5.0.35",
+    "@types/js-yaml": "^3.11.1",
+    "glob": "^7.1.2",
+    "js-yaml": "^3.11.0",
+    "moment": "^2.22.1"
   },
   "devDependencies": {
     "@oclif/test": "1",

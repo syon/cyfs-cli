@@ -1,0 +1,15 @@
+glob: '**/*.json'
+
+name:
+  regex: '^package'
+  contain:
+    - lock
+
+size:
+  min: 0
+  max: 10000
+
+date:
+  access:
+    after: '2018-01-01'
+    before: '2018-04-29'
