@@ -1,0 +1,5 @@
+glob: '**/README.md'
+
+size:
+  min: 20000
+  max: 30000
