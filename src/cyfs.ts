@@ -3,10 +3,11 @@ import * as path from "path"
 import * as yaml from "js-yaml"
 import * as glob from "glob"
 import * as moment from "moment"
+import Order from "./order"
 
 export = (file: string): Array<String> => {
   const buf = fs.readFileSync(file, "utf-8")
-  const order = yaml.safeLoad(buf)
+  const order:Order = <Order> yaml.safeLoad(buf)
   if (!order) return []
   let list = glob.sync(order.glob)
   if (order.name.regex) {
@@ -20,7 +21,7 @@ export = (file: string): Array<String> => {
     list = list.filter(f => {
       const filename = path.basename(f)
       return order.name.contain.some(word => {
-        return ~filename.indexOf(word)
+        return !!~filename.indexOf(word)
       })
     })
   }
