@@ -1,5 +1,5 @@
 import {Command, flags} from '@oclif/command'
-import * as cyfs from './cyfs'
+import cyfs from './cyfs'
 
 class CyfsCli extends Command {
   static description = '🌀 cyfs :: Cyclone in file system. Recipe based file selection CLI tool.'

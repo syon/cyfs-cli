@@ -5,7 +5,7 @@ import * as glob from "glob"
 import * as moment from "moment"
 import Order from "./order"
 
-export = (file: string): Array<String> => {
+export default (file: string): Array<String> => {
   const buf = fs.readFileSync(file, "utf-8")
   const order:Order = <Order> yaml.safeLoad(buf)
   if (!order) return []
