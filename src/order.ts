@@ -11,7 +11,10 @@ export interface IDatetimeAfterBefore {
 export default interface Order {
   glob: string
   name: {
-    regex: string
+    regex: {
+      pattern: string
+      flags: string
+    }
     contain: Array<string>
   }
   size: {

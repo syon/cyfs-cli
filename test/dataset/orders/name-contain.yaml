@@ -1,0 +1,5 @@
+glob: '**/*.json'
+
+name:
+  contain:
+    - lock
