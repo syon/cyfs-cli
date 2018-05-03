@@ -1,3 +1,13 @@
+export interface IDateAfterBefore {
+  after: string
+  before: string
+}
+
+export interface IDatetimeAfterBefore {
+  after: string
+  before: string
+}
+
 export default interface Order {
   glob: string
   name: {
@@ -9,27 +19,12 @@ export default interface Order {
     max: number
   }
   date: {
-    access: {
-      after: string
-      before: string
-    }
-    modify: {
-      after: string
-      before: string
-    }
-    change: {
-      after: string
-      before: string
-    }
-    birth: {
-      after: string
-      before: string
-    }
+    access: IDateAfterBefore
+    modify: IDateAfterBefore
+    change: IDateAfterBefore
+    birth: IDateAfterBefore
   }
   datetime: {
-    access: {
-      after: string
-      before: string
-    }
+    access: IDatetimeAfterBefore
   }
 }
