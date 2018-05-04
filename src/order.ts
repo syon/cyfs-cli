@@ -8,7 +8,7 @@ export interface IDatetimeAfterBefore {
   before: string
 }
 
-export default interface Order {
+export interface Order {
   glob: string
   name: {
     regex: {

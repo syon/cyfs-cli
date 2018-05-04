@@ -3,7 +3,7 @@ import * as path from "path"
 import * as yaml from "js-yaml"
 import * as glob from "glob"
 import * as moment from "moment"
-import Order from "./order"
+import { Order, IDateAfterBefore } from "./order"
 
 export default (file: string): Array<String> => {
   const buf = fs.readFileSync(file, "utf-8")
@@ -46,22 +46,45 @@ export default (file: string): Array<String> => {
     }
   }
   if (order.date) {
-    if (order.date.access) {
-      if (order.date.access.after) {
-        list = list.filter(f => {
-          const stat = fs.statSync(f)
-          const after = order.date.access.after
-          return moment(stat.atime).isSameOrAfter(after, "day")
-        })
-      }
-      if (order.date.access.before) {
-        list = list.filter(f => {
-          const stat = fs.statSync(f)
-          const before = order.date.access.before
-          return moment(stat.atime).isSameOrBefore(before, "day")
-        })
-      }
-    }
+    list = filterByStatDate(list, order.date.access, 'atime')
+    list = filterByStatDate(list, order.date.modify, 'mtime')
+    list = filterByStatDate(list, order.date.change, 'ctime')
+    list = filterByStatDate(list, order.date.birth, 'birthtime')
+  }
+  return list
+}
+
+function getStat(filepath: string, statProp: string) {
+  const stat:fs.Stats = fs.statSync(filepath)
+  switch (statProp) {
+    case 'atime':
+      return stat.atime
+    case 'mtime':
+      return stat.mtime
+    case 'ctime':
+      return stat.ctime
+    case 'birthtime':
+      return stat.birthtime
+    default:
+      return ''
+  }
+}
+
+function filterByStatDate(list: Array<string>, dateAfterBefore: IDateAfterBefore, statProp: string) {
+  if (!dateAfterBefore) return list
+  if (dateAfterBefore.after) {
+    const after = dateAfterBefore.after
+    list = list.filter(f => {
+      const time = getStat(f, statProp)
+      return moment(time).isSameOrAfter(after, "day")
+    })
+  }
+  if (dateAfterBefore.before) {
+    const before = dateAfterBefore.before
+    list = list.filter(f => {
+      const time = getStat(f, statProp)
+      return moment(time).isSameOrBefore(before, "day")
+    })
   }
   return list
 }

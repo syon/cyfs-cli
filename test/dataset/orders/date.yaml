@@ -1,0 +1,6 @@
+glob: '**/README.md'
+
+date:
+  modify:
+    after: '1980-01-01'
+    before: '1990-01-01'
