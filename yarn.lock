@@ -664,9 +664,9 @@ cross-spawn@^5.0.1:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cyfs@syon/cyfs:
-  version "0.0.0"
-  resolved "https://codeload.github.com/syon/cyfs/tar.gz/f3e981f4d43bebcc2d92be7e14d64536f61e5670"
+cyfs@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/cyfs/-/cyfs-0.0.1.tgz#301307e805fef4c76b469729cb44703cfbaf4dc6"
   dependencies:
     cpx "^1.5.0"
     glob "^7.1.2"
