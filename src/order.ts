@@ -9,25 +9,33 @@ export interface IDatetimeAfterBefore {
 }
 
 export interface Order {
-  glob: string
-  name: {
-    regex: {
-      pattern: string
-      flags: string
+  select: {
+    pattern: string
+    include: {
+      name: {
+        regex: {
+          pattern: string
+          flags: string
+        }
+        contain: Array<string>
+      }
+      size: {
+        min: number
+        max: number
+      }
+      date: {
+        access: IDateAfterBefore
+        modify: IDateAfterBefore
+        change: IDateAfterBefore
+        birth: IDateAfterBefore
+      }
+      datetime: {
+        access: IDatetimeAfterBefore
+      }
     }
-    contain: Array<string>
   }
-  size: {
-    min: number
-    max: number
-  }
-  date: {
-    access: IDateAfterBefore
-    modify: IDateAfterBefore
-    change: IDateAfterBefore
-    birth: IDateAfterBefore
-  }
-  datetime: {
-    access: IDatetimeAfterBefore
+  action: {
+    do: string
+    args: object
   }
 }

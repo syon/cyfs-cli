@@ -1,5 +1,6 @@
-glob: '**/*.json'
-
-name:
-  contain:
-    - lock
+select:
+  pattern: '**/*.json'
+  include:
+    name:
+      contain:
+        - lock
