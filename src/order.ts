@@ -31,6 +31,9 @@ export interface Order {
       }
       datetime: {
         access: IDatetimeAfterBefore
+        modify: IDatetimeAfterBefore
+        change: IDatetimeAfterBefore
+        birth: IDatetimeAfterBefore
       }
     }
   }

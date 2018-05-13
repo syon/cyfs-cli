@@ -1,15 +1,14 @@
-glob: '**/*.json'
-
-name:
-  regex: '^package'
-  contain:
-    - lock
-
-size:
-  min: 0
-  max: 10000
-
-date:
-  access:
-    after: '2018-01-01'
-    before: '2018-04-29'
+select:
+  pattern: "**/*.json"
+  include:
+    name:
+      regex: '^package'
+      contain:
+        - lock
+    size:
+      min: 0
+      max: 10000
+    date:
+      modify:
+        after: 2017-01-01
+        before: 2017-12-29
