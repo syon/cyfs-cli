@@ -1,7 +1,7 @@
 {
   "name": "cyfs-cli",
   "description": "🌀 cyfs :: Cyclone in file system. Recipe based file selection CLI tool.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "syon @syon",
   "bin": {
     "cyfs": "./bin/run"
