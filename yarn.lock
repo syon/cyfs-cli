@@ -660,16 +660,18 @@ cross-spawn@^5.0.1:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cyfs@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/cyfs/-/cyfs-0.0.4.tgz#abfe6fcefce2d503a8b107bf2bd2975d5ab4b12f"
+cyfs@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/cyfs/-/cyfs-0.0.5.tgz#56369dd4c5fd7a7affa5b7410f0cbb3853ee2fe8"
   dependencies:
     cpx "^1.5.0"
     debug "^3.1.0"
+    exif "^0.6.0"
     glob "^7.1.2"
     junk "^2.1.0"
     moment "^2.22.1"
     numeral "^2.0.6"
+    p-iteration "^1.1.7"
     renamer "^0.6.1"
     rimraf "^2.6.2"
     shelljs "^0.8.2"
@@ -684,7 +686,7 @@ debug@3.1.0, debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8:
+debug@^2.1.2, debug@^2.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -803,6 +805,12 @@ execa@^0.7.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
+
+exif@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/exif/-/exif-0.6.0.tgz#60a62668076542cb7e4f57199d4ac6f37d2c5f4a"
+  dependencies:
+    debug "^2.2"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -1873,6 +1881,10 @@ osenv@^0.1.4:
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
+
+p-iteration@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/p-iteration/-/p-iteration-1.1.7.tgz#9e71d79ede244b9f52592521f4487a56b6fb50fa"
 
 p-limit@^1.1.0:
   version "1.2.0"
