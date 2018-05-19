@@ -24,12 +24,14 @@ export interface Order {
         max: number
       }
       date: {
+        exif: IDateAfterBefore
         access: IDateAfterBefore
         modify: IDateAfterBefore
         change: IDateAfterBefore
         birth: IDateAfterBefore
       }
       datetime: {
+        exif: IDateAfterBefore
         access: IDatetimeAfterBefore
         modify: IDatetimeAfterBefore
         change: IDatetimeAfterBefore

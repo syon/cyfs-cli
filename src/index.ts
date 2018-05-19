@@ -20,7 +20,7 @@ class CyfsCli extends Command {
       const msg = 'file required.\nExample:\n cyfs order.yaml'
       this.error(msg)
     }
-    const result = bridge(args, flags)
+    const result = await bridge(args, flags)
     console.log(result)
   }
 }
