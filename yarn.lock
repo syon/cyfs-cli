@@ -660,9 +660,9 @@ cross-spawn@^5.0.1:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cyfs@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/cyfs/-/cyfs-0.0.5.tgz#56369dd4c5fd7a7affa5b7410f0cbb3853ee2fe8"
+cyfs@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/cyfs/-/cyfs-0.0.6.tgz#ae8aae9bad3be6ccbab7b388d1c19580c62713e3"
   dependencies:
     cpx "^1.5.0"
     debug "^3.1.0"
