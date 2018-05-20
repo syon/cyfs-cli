@@ -1,13 +1,3 @@
-export interface IDateAfterBefore {
-  after: string
-  before: string
-}
-
-export interface IDatetimeAfterBefore {
-  after: string
-  before: string
-}
-
 export interface Order {
   select: {
     pattern: string
@@ -24,18 +14,14 @@ export interface Order {
         max: number
       }
       date: {
-        exif: IDateAfterBefore
-        access: IDateAfterBefore
-        modify: IDateAfterBefore
-        change: IDateAfterBefore
-        birth: IDateAfterBefore
+        mode: string
+        after: string
+        before: string
       }
       datetime: {
-        exif: IDateAfterBefore
-        access: IDatetimeAfterBefore
-        modify: IDatetimeAfterBefore
-        change: IDatetimeAfterBefore
-        birth: IDatetimeAfterBefore
+        mode: string
+        after: string
+        before: string
       }
     }
   }
