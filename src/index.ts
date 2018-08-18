@@ -9,6 +9,7 @@ class CyfsCli extends Command {
     version: flags.version({char: 'v'}),
     help: flags.help({char: 'h'}),
     preview: flags.boolean({char: 'p'}),
+    force: flags.boolean({char: 'f'}),
   }
 
   static args = [{name: 'file'}]
