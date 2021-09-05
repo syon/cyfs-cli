@@ -19,7 +19,7 @@ $ npm install -g cyfs-cli
 $ cyfs COMMAND
 running command...
 $ cyfs (-v|--version|version)
-cyfs-cli/0.1.0 win32-x64 node-v14.17.5
+cyfs-cli/0.2.0 win32-x64 node-v14.17.5
 $ cyfs --help [COMMAND]
 USAGE
   $ cyfs COMMAND
