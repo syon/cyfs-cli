@@ -1,6 +1,0 @@
-glob: '**/*.md'
-
-name:
-  regex:
-    pattern: '^readme'
-    flags: 'gi'

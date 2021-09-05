@@ -1,6 +1,0 @@
-select:
-  pattern: '**/*.json'
-  include:
-    name:
-      contain:
-        - lock
